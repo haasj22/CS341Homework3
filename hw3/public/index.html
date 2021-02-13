@@ -1,0 +1,107 @@
+<!--
+AUTHOR: John Haas
+DATE PRODUCED: January 27, 2021
+OVERVIEW: An html script produced for the first homework in CS341
+
+External Citation: 
+SOURCE: https://www.w3schools.com/html/default.asp
+DATE ACCESSED: January 26, 2021
+NOTES: Tutorial was constantly referenced while creating this document 
+as it has been many years since I last used HTML.
+-->
+<!DOCTYPE html>
+<html>
+
+    <!--Links my CSS file to this HTML File-->
+    <head>
+        <link rel = "stylesheet"
+          type = "text/css"
+          href = "stylesheets/haasj22_HW1_CSS_script.css"/>
+        <script
+          src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+        <script
+          src="javascripts/haasj22_HW2_JQuery.js">
+        </script>
+   
+
+    </head>
+    
+    <body>
+        <h1>Cheesecake Order Form</h1>
+        <!--Cheesecake image-->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg/240px-Mondays_at_Il_Forno_-_Cheesecake_with_strawberry_sauce.jpg" alt="Cheesecake photo with strawberry sauce on top" height="200" width="200">
+        
+        <h3 id="changable_text">This text ought to be never seen</h3>
+        <!--Table for quantity bar and topping buttons-->
+        <table class="cheesecake_quantity_and_topping_table">
+            <!--Creates two different columns and names them-->
+            <tr>
+                <td>Quantity</td>
+                <td>Topping</td>
+            </tr>
+        
+            <tr>
+                <!--In the first column, I put different amounts of cheesecake that can be ordered-->
+                <td>
+                    <select class="quantity_select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="12">12</option>
+                        <option value="everything">All that you have</option>
+                    </select>
+                </td>
+                <!--In the second column, I put different types of cheesecake that can be chosen from-->
+                <td>
+                    <form id=topping_radio_buttons>
+                        <input type="radio" id="plain" checked="checked" name="topping">
+                        <label class="cheese_cake_radio_button" for="plain">Plain</label> <br>
+                        <input type="radio" id="cherry" name="topping">
+                        <label class="cheese_cake_radio_button" for="cherry">Cherry</label> <br>
+                        <input type="radio" id="chocolate" name="topping">
+                        <label class="cheese_cake_radio_button" for="chocolate">Chocolate</label>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        
+        <!--Place for entering notes on the order-->
+        <label class="notes_label" for="notes">Notes:<br></label>
+        <textarea class= "notes" id="notes" name="notes" rows="5" cols="50">Enter any special information here.</textarea><br>
+        <button type="button" class = "order">Order</button>
+        
+        <!--List of orders-->
+        <table class = "monthly_orders_table">
+            <tr>
+                <td>Total Orders For</td>
+                <td class="hover_drop_down">
+                    <div class="dropdown">
+                        <button class="dropbtn">Jan</button>
+                        <div class="dropdown-content">
+                           <a class = "date_option" id="Jan">Jan</a>
+                           <a class = "date_option" id="Feb">Feb</a>
+                           <a class = "date_option" id="Mar">Mar</a>
+                           <a class = "date_option" id="Apr">Apr</a>
+                           <a class = "date_option" id="May">May</a>
+                           <a class = "date_option" id="June">June</a>
+                           <a class = "date_option" id="July">July</a>
+                           <a class = "date_option" id="Aug">Aug</a>
+                           <a class = "date_option" id="Sep">Sep</a>
+                           <a class = "date_option" id="Oct">Oct</a>
+                           <a class = "date_option" id="Nov">Nov</a>
+                           <a class = "date_option" id="Dec">Dec</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <ul>
+            <li>11 Cherry</li>
+            <li>17 Chocoate</li>
+            <li>31 Plain</li>
+        </ul>
+    </body>
+</html>
